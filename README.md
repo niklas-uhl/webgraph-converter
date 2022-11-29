@@ -5,16 +5,15 @@ to plain text based edge list files.
 
 ## Building + Running
 This tool is built using Gradle. You can build it without installing Gradle. From the project root run:
-```bash
+```console
 # Build and install the executable scripts to the build directory
-> ./gradlew installShadowDist
+$ ./gradlew installShadowDist
 # execute
-> build/install/webgraph-converter-shadow/bin/webgraph-converter
-Usage: webgraph-converter [-hV] [-o=The output filename.] <input basename>
+$ build/install/webgraph-converter-shadow/bin/webgraph-converter
+Usage: webgraph-converter [-hV] [-o=<outFile>] <basename>
 Convert graphs in the webgraph format to plain text edgelists.
-      <input basename>   Basename of the input graph.
-  -h, --help             Show this help message and exit.
-  -o, --outfile=The output filename.
-
-  -V, --version          Print version information and exit.
+      <basename>            Basename of the input graph without file extension.
+  -h, --help                Show this help message and exit.
+  -o, --outfile=<outFile>   The output filename. Defaults to <basename>.edgelist
+  -V, --version             Print version information and exit.
 ```

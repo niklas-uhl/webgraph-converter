@@ -21,10 +21,10 @@ public class Main implements Runnable {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BVGraph.class);
 
-    @CommandLine.Parameters(paramLabel = "<input basename>", description = "Basename of the input graph.")
+    @CommandLine.Parameters(paramLabel = "<basename>", description = "Basename of the input graph without file extension.")
     private String basename;
 
-    @CommandLine.Option(names = {"-o", "--outfile"}, paramLabel = "The output filename.")
+    @CommandLine.Option(names = {"-o", "--outfile"}, description = "The output filename. Defaults to <basename>.edgelist.")
     private File outFile;
 
     @Override
