@@ -50,7 +50,7 @@ public class Main implements Runnable {
             if (outFile == null) {
                 outFile = new File(basename + ".edgelist");
             }
-            LOGGER.info("Writing output to " + outFile);
+            pl.logger.info("Writing output to " + outFile);
             var outFileWriter = new FileWriter(outFile);
             GraphWriter writer = new EdgeListWriter(outFileWriter);
 
@@ -70,7 +70,7 @@ public class Main implements Runnable {
                     var neighbor = neighbors.nextLong();
                         writer.writeEdge(node, neighbor);
                 }
-                pl.count++;
+                pl.update();
             }
             writer.finishWriting();
             outFileWriter.close();
