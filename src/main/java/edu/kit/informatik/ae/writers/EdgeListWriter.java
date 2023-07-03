@@ -27,6 +27,7 @@ public class EdgeListWriter implements GraphWriter {
     }
 
     @Override
-    public void finishWriting() {
+    public void finishWriting() throws IOException {
+        writer.close();
     }
 }
